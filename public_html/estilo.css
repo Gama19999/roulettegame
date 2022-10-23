@@ -1,0 +1,247 @@
+/* 
+    Created on : 20 oct. 2022, 15:26:55
+    Author     : gamars
+*/
+
+@font-face {
+    font-family: 'Segoe Script';
+    src: url('fonts/segoesc.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Tourner';
+    src: url('fonts/Tourner.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Silkscreen';
+    src: url('fonts/Silkscreen-Regular.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Consolas';
+    src: url('fonts/consolaz.ttf') format("truetype");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body { height: 100%; }
+
+body { background: rgba(20,50,12,0.2); }
+
+input:not([type=radio]) {
+    background: linear-gradient(rgb(0,240,255), rgb(0,0,50));
+    color: white;
+    font-family: 'Segoe Script';
+    font-weight: bold;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    width: 80%;
+    height: 50%;
+}
+
+input[type=number] {
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+input[type=button] {
+    justify-self: center;
+    justify-content: center;
+    align-self: center;
+    box-shadow: 7px 6px 5px 0 rgba(0,0,0,0.7);
+    transition: all 0.1s;
+}
+
+input[type=button]:hover {
+    cursor: pointer;
+}
+
+input[type=button]:active {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+    box-shadow: 1px 1px 8px 1px rgba(0,0,0,0.7);
+}
+
+input:not([type=button]):active, input:focus {
+    outline: none;
+    border: none;
+}
+
+::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 3% repeat(7, 1fr) 3%;
+    grid-template-rows: 15% 5% repeat(6, 1fr) 5%;
+    height: 100%;
+}
+
+.grid > * {
+    display: flex;
+}
+
+#pageTitle {
+    grid-column: 1 / 10;
+    grid-row: 1;
+    font-family: 'Tourner';
+    font-size: 4.3rem;
+    justify-self: center;
+    align-self: center;
+    margin-top: 10px;
+    background: linear-gradient(135deg, rgba(77, 188, 13, 1), rgba(255,240,0,1),
+        rgba(255, 116, 0, 1), rgba(255, 0, 0, 1), rgba(106,13,173,1),
+        rgba(0, 31, 133, 1), rgba(255, 255, 255, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: -4px -4px rgba(0,0,0,0.8);
+}
+
+#marginRul {
+    grid-column: 6 / 9;
+    grid-row: 3 / 8;
+    outline: 5px solid deeppink;
+    border-radius: 40px;
+    box-shadow: inset 0 0 20px 20px rgba(66,5,38,0.7);
+}
+
+#roulette {
+    grid-column: 6 / 9;
+    grid-row: 3 / 8;
+    border-radius: 50%;
+    width: 70%;
+    height: 90%;
+    justify-self: center;
+    align-self: center;
+    box-shadow: 0 0 15px 7px rgba(0,0,0,0.75);
+    background: conic-gradient(green 0deg 20deg, red 20deg 40deg, black 40deg 60deg, red 60deg 80deg,
+        black 80deg 100deg, red 100deg 120deg, black 120deg 140deg, red 140deg 160deg, black 160deg 180deg,
+        red 180deg 200deg, black 200deg 220deg, red 220deg 240deg, black 240deg 260deg, red 260deg 280deg,
+        black 280deg 300deg, red 300deg 320deg, black 320deg 340deg, red 340deg 360deg);
+}
+
+#py1, #py2, #py3 {
+    font-family: 'Silkscreen';
+    font-size: 2rem;
+    font-weight: bold;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+#colorBetPy1, #colorBetPy2, #colorBetPy3, p {
+    font-family: 'Consolas';
+    align-self: center;
+    justify-content: space-evenly;
+    box-shadow: 0 0 10px 0 rgba(95,23,98,1);
+    border-radius: 10px;
+}
+
+#py1 {
+    grid-column: 2;
+    grid-row: 3;
+    text-shadow: -3px -3px deeppink;
+}
+
+#betPy1 {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+#colorBetPy1 {
+    grid-column: 2 / 4;
+    grid-row: 4;
+}
+
+#py2 {
+    grid-column: 2;
+    grid-row: 5;
+    text-shadow: 3px 3px darkcyan;
+}
+
+#betPy2 {
+    grid-column: 3;
+    grid-row: 5;
+}
+
+#colorBetPy2 {
+    grid-column: 2 / 4;
+    grid-row: 6;
+}
+
+#py3 {
+    grid-column: 2;
+    grid-row: 7;
+    text-shadow: -3px -3px goldenrod;
+}
+
+#betPy3 {
+    grid-column: 3;
+    grid-row: 7;
+}
+
+#colorBetPy3 {
+    grid-column: 2 / 4;
+    grid-row: 8;
+}
+
+#bstart {
+    grid-column: 6;
+    grid-row: 8;
+}
+
+#info {
+    grid-column: 4 / 6;
+    grid-row: 2;
+}
+
+#match {
+    grid-column: 5;
+    grid-row: 5;
+    font-size: 2rem;
+    text-align: center;
+    width: 80%;
+}
+
+#star {
+    grid-column: 7;
+    grid-row: 4;
+    background: url('pics/star.webp');
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position-x: 3px;
+    width: 40%;
+    height: 80%;
+    justify-self: flex-end;
+    align-self: center;
+    filter: brightness(200%) drop-shadow(0 0 5px white);
+    visibility: hidden;
+}
+
+#fortune {
+    grid-column: 7;
+    grid-row: 8;
+}
+
+#matchWin {
+    grid-column: 5;
+    grid-row: 6;
+    width: 80%;
+}
+
+#absWin {
+    grid-column: 4;
+    grid-row: 5;
+    width: 80%;
+}

@@ -1,0 +1,7 @@
+# Ignore folders
+/test
+/nbproject
+
+# Ignore zip
+*.zip
+

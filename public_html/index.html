@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+    ¬ Play the roulette game with 3 players
+    ¬ All of them must place bets between 5 and 10 coins
+    ¬ After 3 matches, determine the absolute winner depending on the number of
+      coins and color of bets
+    ¬ You must determine the mayor color at the beginning of the complete match
+-->
+<html>
+    <head>
+        <title>Roulette Game</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css"/>
+        <link rel="icon" href="pics/icon.webp"/>
+        <script src="dynamic.js"></script>
+    </head>
+    <body>
+        <div class="grid">
+            <div id="pageTitle">AnOtHeR bAsIc RoUlEtTe GaMe</div>
+            
+            <div id="marginRul"></div>
+            <div id="roulette"></div>
+            <div id="star"></div>
+            
+            <div id="py1">Player<br>I</div>
+            <input type="number" placeholder="Bet Py1" min="5" max="10" id="betPy1"/>
+            <div id="colorBetPy1">
+                <input type="radio" name="colorPy1" value="red" id="redPy1" />&xlArr;Rojo
+                <input type="radio" name="colorPy1" value="green" id="greenPy1" />&xlArr;Verde
+                <!--input type="radio" name="colorPy1" value="cyan" id="cyanPy1" />&xlArr;Cyan-->
+                <input type="radio" name="colorPy1" value="black" id="blackPy1" />&xlArr;Negro
+            </div>
+                
+            <div id="py2">Player<br>II</div>
+            <input type="number" placeholder="Bet Py2" min="5" max="10" id="betPy2"/>
+            <div id="colorBetPy2">
+                <input type="radio" name="colorPy2" value="red" id="redPy2" />&xlArr;Rojo
+                <input type="radio" name="colorPy2" value="green" id="greenPy2" />&xlArr;Verde
+                <!--input type="radio" name="colorPy2" value="cyan" id="cyanPy2" />&xlArr;Cyan-->
+                <input type="radio" name="colorPy2" value="black" id="blackPy2" />&xlArr;Negro
+            </div>
+            
+            <div id="py3">Player<br>III</div>
+            <input type="number" placeholder="Bet Py3" min="5" max="10" id="betPy3"/>
+            <div id="colorBetPy3">
+                <input type="radio" name="colorPy3" value="red" id="redPy3" />&xlArr;Rojo
+                <input type="radio" name="colorPy3" value="green" id="greenPy3" />&xlArr;Verde
+                <!--input type="radio" name="colorPy3" value="cyan" id="cyanPy3" />&xlArr;Cyan-->
+                <input type="radio" name="colorPy3" value="black" id="blackPy3" />&xlArr;Negro
+            </div>
+            
+            <p id="info"></p>
+            <p id="match"></p>
+            <p id="fortune"></p>
+            <p id="matchWin"></p>
+            <p id="absWin"></p>
+            
+            <input type="button" value="Bet & Start" id="bstart" onclick="getBets()" />
+        </div>
+    </body>
+</html>
